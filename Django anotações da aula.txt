@@ -1,0 +1,39 @@
+Introdução DJANGO
+
+"introdução as redes"
+
+MODELO TCP/IP 
+(Aplicação> Transporte> Internet> Acesso a Rede) Comunicação "Cliente <-> Servidor".
+
+URL - Uma URL é uma URI
+
+URI = Identificador de recursos
+
+requisição https
+
+ipinfo.io (localizador de ip)
+
+dns indentifica o url para conectar com o ip da página solicitada.
+
+Protocolo HTTP
+Verbos HTTPs:
+	GET*
+	HEAD
+	POST*
+	PUT
+	DELETE*
+	TRACE
+	OPITIONS
+	CONNECT
+	PATCH*
+Codigos de STATUS: HTTP
+Resposta de Info 1xx
+Resposta de Sucess 2xx
+Recirecionamentos 3xx
+Erro do Cliente 4xx
+Erro do servidor 5xx
+
+
+
+python -m http.server   (obs.: servidor local apenas para fins educativos)
+localhost:8000
