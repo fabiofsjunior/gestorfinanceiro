@@ -1,0 +1,25 @@
+
+Video Aula Dicionário
+https://www.youtube.com/watch?v=hwttZtWkXTk&ab_channel=C%C3%B3digoFonteTV
+
+
+
+Códigos de respostas http
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status?retiredLocale=pt-PT
+
+
+PYTHON + HTTP
+https://www.youtube.com/watch?v=c5FKPzUL70U&ab_channel=Eletr%C3%B4nicaePrograma%C3%A7%C3%A3o
+
+
+Biblioteca Requests no Python [Métodos GET, POST, PATCH e DELETE]
+https://www.youtube.com/watch?v=IdviYZIQLlA&ab_channel=HashtagPrograma%C3%A7%C3%A3o
+
+
+Websockets
+https://www.youtube.com/watch?v=T4unNrKogSA
+
+
+
+Node.JS
+https://www.youtube.com/watch?v=vYekSMBCCiM&ab_channel=C%C3%B3digoFonteTV
