@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;400;800&display=swap');
+
+:root{
+
+    --cor1: #B4FF9F;
+    --cor2: #F9FFA4;
+    --cor3: #FFD59E;
+    --cor4: #FFA1A1;
+    --corTexto: #151515;
+    --corFundoGeral: #e6dcdc61;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    background-color: var(--corFundoGeral);
+    max-width: 100vw;
+    max-height: 100vh;
+    position: relative;
+}
+
+
+#form_container{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+}
+
+#form_box{
+    /*Position and Aling*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    height: 400px;
+    width: 400px;
+
+    /*Apparence*/
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, var(--cor1));
+    box-shadow:  20px 20px 60px #bebebe,
+                 -20px -20px 60px #ffffff;
+
+
+}
+
+#form_box > h1{
+    font-size: 3em;
+}
+
+#form_login{
+    display: flex;
+    flex-direction: column;
+    width: 80%;   
+    justify-content: center; 
+    align-items: center;
+}
+
+#form_login label{
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.form_input{
+    border-radius: 5px;
+    padding: 5px;
+    text-indent: 5px;
+    width: fit-content;
+
+}
+#form_box_input_button{
+    display: flex;
+    width: 55%;
+    margin: 5px;
+    justify-content: flex-end;
+}
+
+#form_input_button{
+    border: 1px solid black;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #f0f0f0, var(--cor2));
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;    
+    width: fit-content;
+    padding: 0px 5px 0px 5px;
+}
+
+#form_input_button a{
+    text-decoration: none;
+    color: var(--corTexto);
+    font-weight: bold;
+}
+
+#form_input_button:hover{
+    background: linear-gradient(145deg, #f0f0f0, var(--cor4));
+    color: var(--corTexto);
+}
+
+#help_box{
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background-color: var(--cor4);
+
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#help_icon{
+    position: absolute;
+    right: 1vw;
+    bottom: 7vh;
+
+    text-align: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, var(--cor3));
+    box-shadow:  10px 10px 30px #bebebe,
+             -10px -10px 30px #ffffff;  
+}
+
+#help_icon a{
+    color: var(--corTexto);
+    text-decoration: none;
+}
+
+#help_icon:hover{
+    background: linear-gradient(145deg, #f0f0f0, var(--cor2));
+    color: var(--corTexto);
+}

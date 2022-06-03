@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;400;800&display=swap');
 
 :root{
-
     --cor1: #B4FF9F;
     --cor2: #F9FFA4;
     --cor3: #FFD59E;
@@ -17,95 +16,150 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
     box-sizing: border-box;
+
     font-family: 'Poppins', sans-serif;
+    color: var(--corTexto);
+}
+
+#page {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: "nav head head head"
+                         "nav main main  aside"
+                         "nav  main main  aside"
+                         "nav  main main  aside";
+
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+
+}
+#page{
+    background-color: var(--corFundoGeral);
+
+}
+  
+#page > header {
+    grid-area: head;
+    background-color: var(--cor1);
+}
+#head_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
     
 }
 
-body{
-    background-color: var(--corFundoGeral);
-    max-width: 100vw;
-    max-height: 100vh;
+#head_avatar img{
+    width: 100px;
 }
 
-
-#form_container{
+#nav_content{
     display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100vw;
-   height: 100vh;
-   border: 1px solid black;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+}  
+#page > nav {
+    grid-area: nav;
+    background-color: var(--corTexto);
+    min-width: 150px
 
 }
+nav a{
+    font-size: 1.2em;
+}
 
-#form_box{
-    /*Position and Aling*/
+#menu_nav{
+    list-style-type: none;
+}
+
+#menu_nav li{
+    margin: 5px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#menu_nav li:hover{
+    background-color: var(--cor1);
+    color: var(--corTexto);
+}
+#menu_nav li:hover a{
+    color: var(--corTexto);
+}
+
+#menu_nav li a:after {
+    content: url('../midia/setaW.png');
+}
+
+#menu_nav li:hover a:after{
+    content: url('../midia/setaB.png');}
+
+
+#page > nav a, #page > nav > p {
+    color: #d3d3d3;
+    padding: 5px 10px 5px 10px;
+
+}
+  
+#page > main {
+    grid-area: main;
+    background-color: white;
+    max-width: 1000px;
+}
+#main_content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;    
-    height: 400px;
-    width: 400px;
-
-    /*Apparence*/
-    border-radius: 50%;
-    background: linear-gradient(145deg, #f0f0f0, var(--cor1));
-    box-shadow:  20px 20px 60px #bebebe,
-                 -20px -20px 60px #ffffff;
-
+    text-align: justify;
 
 }
 
-#form_box > h1{
-    font-size: 3em;
+#main_content_resume{
+    padding: 30px;
 }
+#main_dashboard{
+    padding: 30px;
 
-#form_login{
     display: flex;
     flex-direction: column;
-    width: 80%;   
-    justify-content: center; 
     align-items: center;
-}
-
-#form_login label{
-    font-weight: 500;
-    font-size: 1.5em;
-}
-
-.form_input{
-    border-radius: 5px;
-    padding: 5px;
-    text-indent: 5px;
-    width: fit-content;
+    justify-content: center;
+    gap: 10px;
 
 }
-#form_box_input_button{
-    display: flex;
-    width: 55%;
-    margin: 5px;
-    justify-content: flex-end;
+
+#main_db_image img{
+    width: 100%;
+    min-width: 250px;
 }
 
-#form_input_button{
-    border: 1px solid black;
-    border-radius: 5px;
-    background: linear-gradient(145deg, #f0f0f0, var(--cor2));
-    box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;    
-    width: fit-content;
-    padding: 0px 5px 0px 5px;
+  
+#page > aside {
+    grid-area: aside;
+    background-color: var(--cor2);
+    min-width: 200px;
+
 }
 
-#form_input_button a{
-    text-decoration: none;
-    color: var(--corTexto);
-    font-weight: bold;
+#aside_info{
+    padding: 10px;
+
 }
 
-#form_input_button:hover{
-    background: linear-gradient(145deg, #f0f0f0, var(--cor4));
-    color: var(--corTexto);
+@media only screen and (min-width: 1200px) {
+    #page {
+    grid-template-areas: "nav head head head"
+                            "nav main aside  aside"
+                            "nav  main aside  aside"
+                            "nav  main aside  aside";
+
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    
+}
 }
