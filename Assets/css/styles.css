@@ -67,10 +67,8 @@
     grid-area: nav;
     background-color: var(--corTexto);
     min-width: 150px;
-    max-width: 150px;
-
-
 }
+
 nav a{
     font-size: 1.2em;
 }
@@ -169,15 +167,15 @@ table, td, tr, th{
 
 
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     #page {
-    grid-template-areas: "head head head head"
-                            "nav nav nav nav"
-                            "main main main main"
-                            "main main main main";
+    grid-template-areas: "head head head "
+                            "nav nav nav "
+                            "main main main "
+                            "main main main ";
 
     grid-template-rows: 1fr 0.2fr 5fr;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     background-color: white;
     }
@@ -192,6 +190,7 @@ table, td, tr, th{
     nav{
         width: 100%;
         display: inline-block;
+        
     }
     #nav_content{
         display: flex;
@@ -218,6 +217,7 @@ table, td, tr, th{
     nav a, nav li{
        /*  visibility: hidden;*/
        width: fit-content;
+
     }
 
     aside{
@@ -225,7 +225,7 @@ table, td, tr, th{
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     #page {
     grid-template-areas: "head head head head"
                             "nav nav nav nav"
@@ -288,6 +288,9 @@ table, td, tr, th{
     }
 
 
-    
-
+}    
+@media screen and (min-width: 1200px) {
+        aside{
+            width: 500px;
+        }
 }
