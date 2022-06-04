@@ -22,7 +22,10 @@
     font-family: 'Poppins', sans-serif;
     color: var(--corTexto);
 }
-
+html{
+    width: 100vw;
+    height: 100vh;
+}
 #page {
     display: grid;
     width: 100vw;
@@ -261,6 +264,11 @@ table, td, tr, th{
     background-color: white;
     }
 
+    #page > nav a, #page > nav > p {
+        color: #d3d3d3;
+        padding: 2px 5px 2px 5px;
+    }
+
     #head_avatar img{
         width: 50px;
         height: 50px;
@@ -298,6 +306,7 @@ table, td, tr, th{
     nav a, nav li{
        /*  visibility: hidden;*/
        width: fit-content;
+    
 
     }
 
