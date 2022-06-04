@@ -150,10 +150,6 @@ nav a{
     padding: 10px;
 }
 
-#table_box{
-    overflow-x: scroll;
-}
-
 #table_box *{
     font-size: 1em;
 }
@@ -162,7 +158,6 @@ table{
     width: auto;
     margin: auto;
     margin-top: 30px;
-    overflow-x: scroll;
 }
 table, td, tr, th{
     border: 1px solid black;
@@ -171,18 +166,19 @@ table, td, tr, th{
     padding: 0px;
 }
 
+/* Configs for Screen Upper 1200px */
+@media screen and (min-width: 1200px) {
+    aside{
+        width: 500px;
+    }
+}
+
 /* Configs for Screen Until 1200px */
 @media screen and (max-width: 1200px) {
    
     #table_box *{
         font-size: 0.9em;
     }
-}
-
-@media screen and (min-width: 1200px) {
-        aside{
-            width: 500px;
-        }
 }
 
 /* Configs for Screen Until 800px */
