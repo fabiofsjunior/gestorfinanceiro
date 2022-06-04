@@ -247,8 +247,8 @@ table, td, tr, th{
 }    
 
 
-/* Configs for Screen Until 400px */
-@media screen and (max-width: 400px) {
+/* Configs for Screen Until 390px */
+@media screen and (max-width: 390px) {
     #page {
     grid-template-areas: "head head head "
                             "nav nav nav "
