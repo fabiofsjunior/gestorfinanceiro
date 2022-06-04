@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;400;800&display=swap');
+
+:root{
+    --cor1: #B4FF9F;
+    --cor2: #F9FFA4;
+    --cor3: #FFD59E;
+    --cor4: #FFA1A1;
+    --corTexto: #151515;
+    --corFundoGeral: #e6dcdc61;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--corTexto);
+}
+
+#page {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: "nav head head head"
+                         "nav main main  aside"
+                         "nav  main main  aside"
+                         "nav  main main  aside";
+
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+
+}
+#page{
+    background-color: var(--corFundoGeral);
+
+}
+  
+#page > header {
+    grid-area: head;
+    background-color: var(--cor1);
+}
+#head_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    
+}
+
+#head_avatar img{
+    width: 100px;
+}
+
+#nav_content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+}  
+#page > nav {
+    grid-area: nav;
+    background-color: var(--corTexto);
+    min-width: 150px
+
+}
+nav a{
+    font-size: 1.2em;
+}
+
+#menu_nav{
+    list-style-type: none;
+}
+
+#menu_nav li{
+    margin: 5px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#menu_nav li:hover{
+    background-color: var(--cor1);
+    color: var(--corTexto);
+}
+#menu_nav li:hover a{
+    color: var(--corTexto);
+}
+
+#menu_nav li a:after {
+    content: url('../midia/setaW.png');
+}
+
+#menu_nav li:hover a:after{
+    content: url('../midia/setaB.png');}
+
+
+#page > nav a, #page > nav > p {
+    color: #d3d3d3;
+    padding: 5px 10px 5px 10px;
+
+}
+  
+#page > main {
+    grid-area: main;
+    background-color: white;
+    max-width: 1000px;
+}
+#main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+}
+
+#main_content_resume{
+    padding: 30px;
+}
+#main_dashboard{
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+#main_db_image img{
+    width: 100%;
+    min-width: 250px;
+}
+
+  
+#page > aside {
+    grid-area: aside;
+    background-color: var(--cor2);
+    min-width: 200px;
+
+}
+
+#aside_info{
+    padding: 10px;
+
+}
+
+@media only screen and (min-width: 1200px) {
+    #page {
+    grid-template-areas: "nav head head head"
+                            "nav main aside  aside"
+                            "nav  main aside  aside"
+                            "nav  main aside  aside";
+
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    
+}
+}

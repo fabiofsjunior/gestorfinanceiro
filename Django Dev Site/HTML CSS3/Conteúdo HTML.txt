@@ -1,0 +1,29 @@
+<h1> Conteúdo </h1> = Exemplo de titulo
+<p> Paragráfo </p = Exemplo de Parágrafo
+<img src= "foto.png" alt="exemplo de foto"> (parametro e valor)
+
+
+Estilo CSS
+
+h1 {
+	font-family:Arial;
+	font-size:20pt;
+	color: blue;
+}
+
+
+Estrutura básica do doc HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name-"viewport"
+		content="width=device-width,
+		initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Olá, Mundo!</h1>
+	</body>
+</html>

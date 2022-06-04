@@ -1,0 +1,39 @@
+git Status  (Apresenta os arquivos alterados no repositório.)
+git commit -m "MENSAGEM" (Sobe uma nova versão do código)
+git add . (Prepara todos os arquivos alterados)
+git add "nome do arquivo" (prepara apenas o arquivo citado)
+git push (Atualiza no repositório os arquivos alterados apresentados no comando "GIT STATUS")
+git reflog (apresenta as versõs dos COMMITS)
+git reset --hard "ID" (reseta a versão do código localmente. obs. ID sem aspas.)
+
+
+
+#Branchs
+
+git branch (apresenta as branchs disponivéis)
+git branch staging (criando nova branch "staging")
+git checkout "nome da branch sem as aspas" (muda a branch de: para: "branch citada")
+
+
+##Merge Branch
+
+git checkout "branch principal" > git merge "nome da branch que irá ser puxada para branch principal"
+(antes de fazer merge, utilize o comando "GIT PULL" para atualizar seu conteúdo local antes do merge"
+
+CRIANDO NOVA BRANCH
+
+git checkout -b "nome da branch sem aspas" + "qual branche padrão"
+
+#Pull Request
+
+após realizar o push com o os seus commits, passe mais detalhes, no seu "PULLREQUEST"
+
+
+
+#Git Ignore
+
+touch .gitignore  (nome do arquivo/)
+
+
+#link do estudo
+https://www.youtube.com/watch?v=kB5e-gTAl_s&t=113s
