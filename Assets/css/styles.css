@@ -27,6 +27,7 @@
     display: grid;
     width: 100vw;
     height: 100vh;
+    min-width: 390px;
     grid-template-areas: "nav head head head"
                          "nav main main  aside"
                          "nav  main main  aside"
@@ -34,10 +35,8 @@
 
     grid-template-rows: 1fr 3fr 3fr;
     grid-template-columns: 1fr 3fr 3fr 1fr;
-
-}
-#page{
     background-color: var(--corFundoGeral);
+
 
 }
   
@@ -50,7 +49,6 @@
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
-    
 }
 
 #head_avatar img{
@@ -62,7 +60,8 @@
     flex-direction: column;
     height: 100%;
     justify-content: flex-end;
-}  
+} 
+
 #page > nav {
     grid-area: nav;
     background-color: var(--corTexto);
@@ -102,7 +101,6 @@ nav a{
 #page > nav a, #page > nav > p {
     color: #d3d3d3;
     padding: 5px 10px 5px 10px;
-
 }
   
 #page > main {
@@ -110,18 +108,19 @@ nav a{
     background-color: white;
     max-width: 1000px;
 }
+
 #main_content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: justify;
-
 }
 
 #main_content_resume{
     padding: 30px;
 }
+
 #main_dashboard{
     padding: 30px;
 
@@ -130,7 +129,6 @@ nav a{
     align-items: center;
     justify-content: center;
     gap: 10px;
-
 }
 
 #main_db_image img{
@@ -143,16 +141,20 @@ nav a{
     grid-area: aside;
     background-color: var(--cor2);
     min-width: 200px;
-
 }
 
 #aside_info{
     padding: 10px;
-
 }
+
 #table_box{
     overflow-x: scroll;
 }
+
+#table_box *{
+    font-size: 1em;
+}
+
 table{
     width: auto;
     margin: auto;
@@ -163,10 +165,10 @@ table, td, tr, th{
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
+    padding: 0px;
 }
 
-
-
+/* Configs for Screen Until 400px */
 @media screen and (max-width: 400px) {
     #page {
     grid-template-areas: "head head head "
@@ -225,6 +227,7 @@ table, td, tr, th{
     }
 }
 
+/* Configs for Screen Until 800px */
 @media screen and (max-width: 800px) {
     #page {
     grid-template-areas: "head head head head"
@@ -286,9 +289,16 @@ table, td, tr, th{
     aside{
         display: none;
     }
-
-
 }    
+
+/* Configs for Screen Until 1200px */
+@media screen and (max-width: 1200px) {
+   
+    #table_box *{
+        font-size: 0.9em;
+    }
+}
+
 @media screen and (min-width: 1200px) {
         aside{
             width: 500px;
