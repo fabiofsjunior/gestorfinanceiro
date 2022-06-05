@@ -148,7 +148,24 @@ body{
     color: var(--corTexto);
 }
 
-@media screen and (max-width:400px) {
+@media screen and (min-width:250px) {
+    #form_box{
+        height: 250px;
+        width: 250px; 
+    }
+
+    #form_box h1{
+        font-size: 1em;
+
+    }
+
+    #form_login label, #form_login input{
+        font-size: 0.8em;
+    }
+    
+}
+
+@media screen and (min-width:400px) {
     #form_box{
         height: 300px;
         width: 300px; 
