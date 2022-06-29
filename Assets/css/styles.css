@@ -92,7 +92,7 @@ nav a{
 
 #menu_nav li{
     margin: 5px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     text-align: center;
 }
 
@@ -104,12 +104,12 @@ nav a{
     color: var(--corTexto);
 }
 
-#menu_nav li a:after {
+/* #menu_nav li a:after {
     content: url('../midia/setaW.png');
 }
 
 #menu_nav li:hover a:after{
-    content: url('../midia/setaB.png');}
+    content: url('../midia/setaB.png');} */
 
 
 #page > nav a, #page > nav > p {
