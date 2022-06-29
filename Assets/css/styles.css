@@ -53,13 +53,14 @@ html{
     align-items: center;
     height: 100%;
 }
-#head_avatar{
+
+#nav_avatar{
     margin-left: auto;
     margin-right: auto;
     margin-top: 1vh;   
 }
 
-#head_avatar img{
+#nav_avatar img{
     width: 100px;    
 }
 
@@ -205,6 +206,10 @@ table, td, tr, th{
     aside{
         width: 500px;
     }
+    #head_avatar img{
+        display: none;
+    }
+    
 }
 
 /* Configs for Screen Until 1200px */
@@ -213,6 +218,10 @@ table, td, tr, th{
     #table_box *{
         font-size: 0.9em;
     }
+    #head_avatar img{
+        display: none;
+    }
+    
 }
 
 /* Configs for Screen Until 800px */
@@ -228,8 +237,21 @@ table, td, tr, th{
 
     background-color: white;
     }
-
     #head_avatar img{
+        display: block;
+    }
+    #head_avatar img{
+        width: 75px;
+        height: 75px;
+        right: 2vw;
+        top: 2vh;
+    }
+
+    #nav_avatar{
+        display: none;
+    }
+
+    #nav_avatar img{
         width: 75px;
         height: 75px;
         position: absolute;
@@ -298,7 +320,9 @@ table, td, tr, th{
         color: #d3d3d3;
         padding: 2px 5px 2px 5px;
     }
-
+    #head_avatar{
+        display: none;
+    }
     #head_avatar img{
         width: 50px;
         height: 50px;
