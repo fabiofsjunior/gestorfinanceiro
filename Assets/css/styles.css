@@ -91,17 +91,26 @@ nav a{
 }
 
 #menu_nav li{
-    margin: 5px;
-    /* border: 1px solid white; */
-    text-align: center;
+    margin: 10px;
+}
+#menu_nav li a{
+    background-color: var(--cor1);
+    padding: 5px 20px 5px 20px;
+    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+    color: var(--corTexto);
+    transition: 0.7s;
+    width: 100%;
+    letter-spacing: 2px;
+
 }
 
-#menu_nav li:hover{
-    background-color: var(--cor1);
-    color: var(--corTexto);
-}
 #menu_nav li:hover a{
     color: var(--corTexto);
+    background-color: var(--cor3);
+    clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 10% 99%, 0% 50%, 10% 0);
+    letter-spacing: 4px;
+
+
 }
 
 /* #menu_nav li a:after {
@@ -112,7 +121,7 @@ nav a{
     content: url('../midia/setaB.png');} */
 
 
-#page > nav a, #page > nav > p {
+#page > nav > p {
     color: #d3d3d3;
     padding: 5px 10px 5px 10px;
 }
@@ -280,9 +289,8 @@ table, td, tr, th{
         align-items: center;
         width: 100vw;
         height: fit-content;
-
-        
     }
+
     #menu_nav ul li{
         justify-content: center;
         align-items: center;
@@ -325,7 +333,7 @@ table, td, tr, th{
     background-color: white;
     }
 
-    #page > nav a, #page > nav > p {
+    #page > nav > p {
         color: #d3d3d3;
         padding: 2px 5px 2px 5px;
     }
@@ -343,6 +351,9 @@ table, td, tr, th{
         width: 100%;
         display: inline-block;
         
+    }
+    nav a{
+        font-size: 0.9em;
     }
     #nav_content{
         display: flex;
