@@ -301,7 +301,16 @@ table, td, tr, th{
     }
 }    
 
+/* Configs for Screen Until 440px */
+@media screen and (max-width: 440px) {
 
+    #menu_nav li{
+        display: inline-block;
+        margin: 0;
+        font-size: 0.8em;
+    }
+
+}
 /* Configs for Screen Until 390px */
 @media screen and (max-width: 390px) {
     #page {
