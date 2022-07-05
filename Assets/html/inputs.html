@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Inputs</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script copy.js"></script>
 </head>
 <body id="page">
     <!--Header Area Start -->
@@ -30,9 +31,8 @@
             </div>
             <div>
                 <ul id="menu_nav">
-                    <li><a class="link" href=""><strong>Home</strong></a></li>
-                    <li><a href="inputs.html
-">Inputs </a></li>
+                    <li><a class="link" href="home.html"><strong>Home</strong></a></li>
+                    <li><a href="inputs.html">Inputs </a></li>
                     <li><a href="">Historic</a></li>
                     <li><a href="https://fabiofsjunior.github.io/gestorfinanceiro/">Logout</a></li>
                 </ul>
@@ -46,15 +46,35 @@
     <main>
         <div id="main_content">
             <div id="main_content_resume">
-                <h1>Dashboard</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam error eos delectus asperiores beatae recusandae perspiciatis pariatur officiis expedita incidunt quod accusamus aliquid, eveniet magnam ab quidem voluptas odio impedit.
-                </p>
+            <h1>Dashboard</h1>
+            <p>Registre aqui suas movimentações.</p>
             </div>
-            <div id="main_dashboard">
-                <div id="main_db_image"><img src="../midia/dashboard.png" alt=""></div>
-                <p><i>Legenda: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus adipisci delectus saepe itaque optio. Sapiente cumque odit inventore doloremque doloribus, impedit iusto voluptate? Deleniti numquam sit quasi eligendi id mollitia!</i></p>
+        
+            <form action="" autocomplete="off">
+                <label for="tag" >Tag</label><br>
+                <select name="tag" id="tag">
+                    <option value="transporte">Transporte</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="saude">Saúde</option>
+                    <option value="educacao">Educação</option>
+                    <option value="lazer">Lazer</option>
+                </select><br>
+                <label for="desc" >Descrição</label><br>
+                <input type="text" name="desc" id="desc" placeholder="Digite o item"><br>
+                <label for="valor" >Valor</label><br>
+                <input type="text" name="valor" id="valor" placeholder="Digite o valor"><br>
+                <!-- <input type="submit" id="send" onclick="pickItem()" value="Adicionar"> -->
+                <div onclick="addOnList()">Adicionar</div>
+            </form>
+
+             
+            <div>
+                <ul id="lista">Histórico
+                </ul>
             </div>
-        </div>
+        </div>    
+        
+           
     </main>
     <!--Main Area Finish-->
 
