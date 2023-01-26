@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;400;800&display=swap');
 
-:root{
+:root {
     --cor1: #B4FF9F;
     --cor2: #F9FFA4;
     --cor3: #FFD59E;
@@ -13,7 +13,7 @@
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -22,19 +22,21 @@
     font-family: 'Poppins', sans-serif;
     color: var(--corTexto);
 }
-html{
+
+html {
     width: 100vw;
     height: 100vh;
 }
+
 #page {
     display: grid;
     width: 100vw;
     height: 100vh;
     min-width: 390px;
     grid-template-areas: "nav head head head"
-                         "nav main main  aside"
-                         "nav  main main  aside"
-                         "nav  main main  aside";
+        "nav main main  aside"
+        "nav  main main  aside"
+        "nav  main main  aside";
 
     grid-template-rows: 1fr 3fr 3fr;
     grid-template-columns: 1fr 3fr 3fr 1fr;
@@ -42,121 +44,176 @@ html{
 
 
 }
-  
-#page > header {
+
+#page>header {
     grid-area: head;
     background-color: var(--cor1);
 }
-#head_container{
+
+#head_container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
 }
 
-#nav_avatar{
+#nav_avatar {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1vh;   
+    margin-top: 1vh;
 }
 
-#nav_avatar img{
-    width: 100px;    
+#nav_avatar img {
+    width: 100px;
 }
 
-#nav_content{
+
+#nav_content {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-} 
-#appVersion{
+}
+
+#appVersion {
     color: var(--cor2);
     font-size: 0.8em;
     text-align: center;
 }
 
-#page > nav {
+#page>nav {
     grid-area: nav;
     background-color: var(--corTexto);
     min-width: 150px;
 }
 
-nav a{
+nav a {
     font-size: 1.2em;
 }
 
-#menu_nav{
+#menu_nav {
     list-style-type: none;
 }
 
-#menu_nav li{
+#menu_nav li {
     margin: 10px;
 }
-#menu_nav li a{
-    background-color: var(--cor1);
-    padding: 5px 20px 5px 20px;
-    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+
+#menu_nav li a {
+    background-color: var(--cor2);
+    padding: 0;
+    display: block;
+    max-width: 200px;
+    max-height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
     color: var(--corTexto);
-    transition: 0.7s;
-    width: 100%;
+    border: 2px solid #333;
     letter-spacing: 2px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    transition: all .35s;
 
 }
 
-#menu_nav li:hover a{
-    color: var(--corTexto);
-    background-color: var(--cor3);
-    clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 10% 99%, 0% 50%, 10% 0);
+
+#menu_nav li:hover {
+    place-items: center;
+
+}
+#menu_nav li:hover a {
     letter-spacing: 4px;
-
+    z-index: 1;
 
 }
 
-/* #menu_nav li a:after {
-    content: url('../midia/setaW.png');
+#menu_nav a:hover:after {
+    width: 100%;
+
+}
+
+#menu_nav li a:hover {
+    position: relative;
+    z-index: 2;
+
+}
+
+#menu_nav li a span {
+    position: relative;
+    z-index: 2;
+}
+
+#menu_nav a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cor1);
+    transition: all .35s;
+    color: var(--corTexto);
+
+}
+#menu_nav a:after:hover {
+    color: var(--cor1);
+
+}
+
+
+
+#menu_nav li a:after {
+    /* content: url('../midia/setaW.png'); */
+    opacity: 0.7;
 }
 
 #menu_nav li:hover a:after{
-    content: url('../midia/setaB.png');} */
+    /* content: url('../midia/setaB.png'); */
+}
+#link{
+    color: var(--corTexto);
+}
 
 
-#page > nav > p {
+#page>nav>p {
     color: #d3d3d3;
     padding: 5px 10px 5px 10px;
 }
-  
-#page > main {
+
+#page>main {
     grid-area: main;
     background-color: white;
     max-width: 1000px;
     overflow-y: scroll;
-    
+
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
+/* Firefox */
+* {
     scrollbar-width: auto;
     scrollbar-color: var(--cor4);
-  }
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #ffffff;
-  }
+}
 
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: var(--cor4);
     border-radius: 10px;
     border: 3px solid #ffffff;
-  }
+}
 
-#main_content{
+#main_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,7 +221,7 @@ nav a{
     text-align: justify;
 }
 
-#main_content_resume{
+#main_content_resume {
     padding: 30px;
 }
 
@@ -180,7 +237,10 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"], input[type="email"], textarea, select {
+input[type="text"],
+input[type="email"],
+textarea,
+select {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
@@ -209,7 +269,7 @@ input[type="submit"]:hover {
 }
 
 
-#main_dashboard{
+#main_dashboard {
     padding: 30px;
 
     display: flex;
@@ -219,32 +279,36 @@ input[type="submit"]:hover {
     gap: 10px;
 }
 
-#main_db_image img{
+#main_db_image img {
     width: 100%;
     min-width: 250px;
 }
 
-  
-#page > aside {
+
+#page>aside {
     grid-area: aside;
     background-color: var(--cor2);
     min-width: 200px;
 }
 
-#aside_info{
+#aside_info {
     padding: 10px;
 }
 
-#table_box *{
+#table_box * {
     font-size: 1em;
 }
 
-table{
+table {
     width: auto;
     margin: auto;
     margin-top: 30px;
 }
-table, td, tr, th{
+
+table,
+td,
+tr,
+th {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
@@ -253,78 +317,86 @@ table, td, tr, th{
 
 /* Configs for Screen Upper 1200px */
 @media screen and (min-width: 1200px) {
-    aside{
+    aside {
         width: 500px;
     }
-    #head_avatar img{
+
+    #head_avatar img {
         display: none;
     }
-    
+
 }
 
 /* Configs for Screen Until 1200px */
 @media screen and (max-width: 1200px) {
-   
-    #table_box *{
+
+    #table_box * {
         font-size: 0.9em;
     }
-    #head_avatar img{
+
+    #head_avatar img {
         display: none;
     }
-    
+
 }
 
 /* Configs for Screen Until 800px */
 @media screen and (max-width: 800px) {
     #page {
-    grid-template-areas: "head head head head"
-                            "nav nav nav nav"
-                            "main main main main"
-                            "main main main main";
+        grid-template-areas: "head head head head"
+            "nav nav nav nav"
+            "main main main main"
+            "main main main main";
 
-    grid-template-rows: 1fr 0.2fr 5fr;
-    grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 1fr 0.2fr 5fr;
+        grid-template-columns: 2fr 2fr 2fr;
 
-    background-color: white;
+        background-color: white;
     }
-    #head_avatar img{
+
+    #head_avatar img {
         display: block;
     }
-    #head_avatar img{
+
+    #head_avatar img {
         width: 75px;
         height: 75px;
         right: 2vw;
         top: 2vh;
     }
 
-    #nav_avatar{
+    #nav_avatar {
         display: none;
     }
 
-    #nav_avatar img{
+    #nav_avatar img {
         width: 75px;
         height: 75px;
         position: absolute;
         right: 2vw;
         top: 2vh;
     }
-    nav{
+
+    nav {
         width: 100%;
         display: inline-block;
     }
-    #nav_content{
+
+    #nav_content {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         width: 100%;
         height: fit-content;
-      
+
     }
-    #nav_content p, #menu_nav li a::after{
+
+    #nav_content p,
+    #menu_nav li a::after {
         display: none;
     }
 
-    #menu_nav{
+    #menu_nav {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -332,71 +404,78 @@ table, td, tr, th{
         height: fit-content;
     }
 
-    #menu_nav ul li{
+    #menu_nav ul li {
         justify-content: center;
         align-items: center;
         margin: 0;
         font-size: 1em;
-        
+
     }
- 
-    nav a, nav li{
-       /*  visibility: hidden;*/
-       width: fit-content;
+
+    nav a,
+    nav li {
+        /*  visibility: hidden;*/
+        width: fit-content;
     }
-    
-    aside{
+
+    aside {
         display: none;
     }
-}    
+}
 
 /* Configs for Screen Until 440px */
 @media screen and (max-width: 440px) {
 
-    #menu_nav li{
+    #menu_nav li {
         display: inline-block;
         margin: 0;
         font-size: 0.8em;
     }
 
 }
+
 /* Configs for Screen Until 390px */
 @media screen and (max-width: 390px) {
     #page {
-    grid-template-areas: "head head head "
-                            "nav nav nav "
-                            "main main main "
-                            "main main main ";
+        grid-template-areas: "head head head "
+            "nav nav nav "
+            "main main main "
+            "main main main ";
 
-    grid-template-rows: 1fr 0.2fr 5fr;
-    grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.2fr 5fr;
+        grid-template-columns: 1fr 1fr 1fr;
 
-    background-color: white;
+        background-color: white;
     }
 
-    #page > nav > p {
+    #page>nav>p {
         color: #d3d3d3;
         padding: 2px 5px 2px 5px;
     }
-    #head_avatar{
+
+    #head_avatar {
         display: none;
     }
-    #head_avatar img{
+
+    #head_avatar img {
         width: 50px;
         height: 50px;
         position: absolute;
         right: 2vw;
         top: 1vh;
     }
-    nav{
+
+    nav {
         width: 100%;
         display: inline-block;
-        
+
     }
-    nav a{
+
+    nav a {
         font-size: 0.9em;
     }
-    #nav_content{
+
+    #nav_content {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -404,31 +483,32 @@ table, td, tr, th{
         height: fit-content;
         justify-content: center;
     }
-    #nav_content p, #menu_nav li a::after{
+
+    #nav_content p,
+    #menu_nav li a::after {
         display: none;
     }
 
-    #menu_nav{
+    #menu_nav {
         width: 100%;
         height: fit-content;
     }
-    #menu_nav li{
+
+    #menu_nav li {
         display: inline-block;
         margin: 0;
         font-size: 1em;
     }
-  
-    nav a, nav li{
-       /*  visibility: hidden;*/
-       width: fit-content;
-    
+
+    nav a,
+    nav li {
+        /*  visibility: hidden;*/
+        width: fit-content;
+
 
     }
 
-    aside{
+    aside {
         display: none;
     }
 }
-
-
-

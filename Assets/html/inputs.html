@@ -33,7 +33,7 @@
             </div>
             <div>
                 <ul id="menu_nav">
-                    <li><a class="link" href="home.html"><strong>Home</strong></a></li>
+                    <li><a class="link" href="home.html">Home</a></li>
                     <li><a href="inputs.html">Inputs </a></li>
                     <li><a href="">Historic</a></li>
                     <li><a href="https://fabiofsjunior.github.io/gestorfinanceiro/">Logout</a></li>
@@ -55,16 +55,17 @@
             <form action="" autocomplete="off">
                 <label for="tag">Tag</label><br>
                 <select name="tag" id="tag">
-                    <option value="transporte">Transporte</option>
-                    <option value="alimentacao">Alimentação</option>
-                    <option value="saude">Saúde</option>
-                    <option value="educacao">Educação</option>
-                    <option value="lazer">Lazer</option>
+                    <option value="Alimentacao">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Roupas">Educação</option>
+                    <option value="Outros">Educação</option>
                 </select><br>
                 <label for="desc">Descrição</label><br>
                 <input type="text" name="desc" id="desc" placeholder="Digite o item"><br>
                 <label for="valor">Valor</label><br>
-                <input type="text" name="valor" id="valor" placeholder="Digite o valor"><br>
+                <input type="text" pattern="[0-9]*" name="valor" id="valor" placeholder="Digite o valor"><br>
                 <input type="submit" id="send" onclick="pickItem()" value="Adicionar">
                 <!-- <div class="button" onclick="addOnList()">Adicionar</div> -->
             </form>
