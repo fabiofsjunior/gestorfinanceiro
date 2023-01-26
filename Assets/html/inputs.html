@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/script copy.js"></script>
 </head>
+
 <body id="page">
     <!--Header Area Start -->
     <header>
@@ -46,12 +48,12 @@
     <main>
         <div id="main_content">
             <div id="main_content_resume">
-            <h1>Dashboard</h1>
-            <p>Registre aqui suas movimentações.</p>
+                <h1>Dashboard</h1>
+                <p>Registre aqui suas movimentações.</p>
             </div>
-        
+
             <form action="" autocomplete="off">
-                <label for="tag" >Tag</label><br>
+                <label for="tag">Tag</label><br>
                 <select name="tag" id="tag">
                     <option value="transporte">Transporte</option>
                     <option value="alimentacao">Alimentação</option>
@@ -59,22 +61,22 @@
                     <option value="educacao">Educação</option>
                     <option value="lazer">Lazer</option>
                 </select><br>
-                <label for="desc" >Descrição</label><br>
+                <label for="desc">Descrição</label><br>
                 <input type="text" name="desc" id="desc" placeholder="Digite o item"><br>
-                <label for="valor" >Valor</label><br>
+                <label for="valor">Valor</label><br>
                 <input type="text" name="valor" id="valor" placeholder="Digite o valor"><br>
-                <!-- <input type="submit" id="send" onclick="pickItem()" value="Adicionar"> -->
-                <div onclick="addOnList()">Adicionar</div>
+                <input type="submit" id="send" onclick="pickItem()" value="Adicionar">
+                <!-- <div class="button" onclick="addOnList()">Adicionar</div> -->
             </form>
 
-             
+
             <div>
                 <ul id="lista">Histórico
                 </ul>
             </div>
-        </div>    
-        
-           
+        </div>
+
+
     </main>
     <!--Main Area Finish-->
 
@@ -108,19 +110,19 @@
                             <td>Saída</td>
                             <td>R$ -25,00</td>
                         </tr>
-                    <tr>
-                        <td>Ex.: Venda de Produto</td>
-                        <td>03/06/2022</td>
-                        <td>Entrada</td>
-                        <td>R$ 105,00</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="3">Total</th>
-                        <td>R$ 80,00</td>
-                    </tr>
-                </tfoot>
+                        <tr>
+                            <td>Ex.: Venda de Produto</td>
+                            <td>03/06/2022</td>
+                            <td>Entrada</td>
+                            <td>R$ 105,00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3">Total</th>
+                            <td>R$ 80,00</td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
 
@@ -130,4 +132,5 @@
 
     <!--No Have footer :D -->
 </body>
+
 </html>
